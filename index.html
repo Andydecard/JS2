@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+            body {
+                margin: 0 auto;
+                background-color: #E5E5E5;
+                color:#666666;
+            }
+            header {
+                height: 50px;
+                background-color: #3a3f41;
+                width:100%;
+            }
+        .cart-button {
+            position: relative;
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 26px;
+            border-radius: 5px;
+            border: solid 1px #3866a3;
+            background: linear-gradient(180deg, #63B8EE 5%, #468ccf 100%);
+            text-shadow: 1px 1px 0px #528ecc;
+            box-shadow: inset 1px 1px 0px 0px #bbdaf7;}
+
+            .goods-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 300px;
+                margin: 0 auto;
+                background: white;
+                padding: 20px;
+                border: 1px solid #F1E7E8;
+            }
+            .goods-list p {
+                font-size: 20px;
+            }
+            .goods-list h3 {
+                font-size: 24px;
+            }
+    </style>
+</head>
+<body>
+<header>
+    <button class="cart-button" type="button">Корзина</button>
+</header>
+<main>
+    <div class="goods-list"></div>
+</main>
+<script src="index.js"> </script>
+</body>
+</html>
