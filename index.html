@@ -19,20 +19,32 @@
                 width:100%;
                 padding: 10px 20px;
                 box-sizing: border-box;
+                border-bottom: 1px solid #c0c0c0;
                 display: flex;
                 justify-content: flex-end;
             }
             .goods-item {
-                width: 300;
+                padding: 20px;
+                margin-left: 20px;
+                /*width: 200px;*/
+                background-color: #3a3f41;
+                width: calc(100% /3 - 40px);
+                margin-bottom: 20px;
+            }
+            .title {
+                font-weight: bold;
+                font-size: 18px;
             }
         .cart-button {
+            -moz-appearance: none;
+            border: none;
             margin: initial;
             cursor: pointer;
-            padding: 10px;
+            padding: 5px 10px;
             color: #FFFFFF;
             font-family: Arial;
             font-size: 18px;
-            border-radius: 5px;
+            border-radius: 4px;
             border: solid 1px #3866a3;
             background: linear-gradient(180deg, #63B8EE 5%, #468ccf 100%);
             text-shadow: 1px 1px 0px #528ecc;
@@ -54,6 +66,7 @@
             .goods-list h3 {
                 font-size: 24px;
             }
+
     </style>
 </head>
 <body>
