@@ -42,6 +42,7 @@ function makeGETRequest(url) {
     class GoodsList {
         constructor() {
             this.goods = [];
+            this.initEvents();
         }
         fetchGoods() {
             return makeGETRequest(`${API_URL}/catalogData.json`)
@@ -49,6 +50,19 @@ function makeGETRequest(url) {
             .catch(e => {
                 return e;
             });
+        }
+        filterGoods(value) {
+            //filter
+            console.log(value);
+        }
+        initEvents(){
+            const searchForm = document.querySelector('.search-form');
+            const searchInput = document.querySelector('.search-input');
+            serchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const value = searchInput.value;
+                this.filterGoods(value);
+            })
         }
         totalPrice() {
             return this.goods.reduce((accum, item) => {

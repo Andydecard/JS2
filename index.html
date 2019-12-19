@@ -7,15 +7,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>eShop</title>
-    <link rel="stylesheet" href="../../../Desktop/JS%202/reset.css">
-    <link rel="stylesheet" href="../../../Desktop/JS%202/widgets/chat/style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="widgets/chat/style.css">
     <style>
         .header {
             padding: 10px 20px;
             border-bottom: 1px solid #c0c0c0;
             display: flex;
-            justify-content: flex-end;
             margin-bottom: 40px;
+        }
+        .container {
+            max-width: 1280px;
+            padding: 0 20px;
+            display: flex;
+            margin: 0 auto;
         }
         .cart-button {
             -webkit-appearance: none;
@@ -24,6 +29,7 @@
             color: #fff;
             border-radius: 4px;
             padding: 5px 10px;
+            margin-left: auto;
         }
         .goods-list {
             display: flex;
@@ -49,12 +55,18 @@
 </head>
 <body>
 <header class="header">
+    <div class="container">
+    <form class="search-form">
+        <input type="text" class="search-input">
+        <button class="search-button">Искать</button>
+    </form>
     <button class="cart-button">Корзина</button>
+    </div>
 </header>
 <main>
     <div class="goods-list"></div>
 </main>
 <script src="index.js"></script>
-<script src="../../../Desktop/JS%202/widgets/chat/main.js"></script>
+<script src="widgets/chat/main.js"></script>
 </body>
 </html>
