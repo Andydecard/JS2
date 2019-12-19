@@ -6,13 +6,13 @@ console.log(regexp.test(str));
 
 
 const str1 = 'Lorem ipsum dolor sit amet, \'consectetur\' adipiscing elit. Nulla nisl nisl, bibendum in aliquet eu, ' +
-    'blandit a massa. Donec placerat viverra tortor, ut ultricies ante sollicitudin non. Mauris non pretium velit.' +
+    'blandit a massa. Donec placerat viverra a\`int tortor, ut ultricies ante sollicitudin non. Mauris non pretium velit.' +
     ' Vivamus blandit bibendum vulputate. Sed non mollis velit, vitae faucibus nulla. Integer at nunc ut ex vehicula' +
     ' ullamcorper. Donec ornare nisi massa, id porta odio consequat non. Praesent nec vehicula dolor. Ut ' +
     'rhoncus efficitur risus vitae pulvinar. Maecenas luctus lorem at odio pharetra maximus. Nullam pulvinar' +
     ' urna vitae tempor placerat. Etiam in posuere est, nec sagittis elit. Sed rhoncus velit id congue suscipit. ' +
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu lacinia orci.';
-const regexp3 = /\'/gmi;
+const regexp3 = /\'(?!int)/gmi;
 console.log(str1.replace(regexp3, '"'));
 
 // console.log(str1.match(regexp3));
