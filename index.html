@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,85 +6,55 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel='stylesheet' type="text/css" href="reset.css">
+    <title>eShop</title>
+    <link rel="stylesheet" href="../../../Desktop/JS%202/reset.css">
+    <link rel="stylesheet" href="../../../Desktop/JS%202/widgets/chat/style.css">
     <style>
-        body {
-            margin: 0 auto;
-            background-color: #E5E5E5;
-            color: #666666;
-        }
-
-        header {
-            height: 50px;
-            background-color: #3a3f41;
-            width: 100%;
+        .header {
             padding: 10px 20px;
-            box-sizing: border-box;
             border-bottom: 1px solid #c0c0c0;
             display: flex;
             justify-content: flex-end;
+            margin-bottom: 40px;
         }
-
+        .cart-button {
+            -webkit-appearance: none;
+            border: none;
+            background-color: #46a5fc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        .goods-list {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
         .goods-item {
             padding: 20px;
             margin-left: 20px;
-            /*width: 200px;*/
-            background-color: #3a3f41;
-            width: calc(100% / 3 - 40px);
+            margin-bottom: 20px;
+            width: calc(100% / 3 - 60px);
+            background-color: #f1f1f1;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .goods-title {
             margin-bottom: 20px;
         }
-
-        .title {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .cart-button {
-            -moz-appearance: none;
-            border: none;
-            margin: initial;
-            cursor: pointer;
-            padding: 5px 10px;
-            color: #FFFFFF;
-            font-family: Arial;
-            font-size: 18px;
-            border-radius: 4px;
-            border: solid 1px #3866a3;
-            background: linear-gradient(180deg, #63B8EE 5%, #468ccf 100%);
-            text-shadow: 1px 1px 0px #528ecc;
-            box-shadow: inset 1px 1px 0px 0px #bbdaf7;
-        }
-
-        .goods-list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 300px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border: 1px solid #F1E7E8;
-        }
-
-        .goods-list p {
-            font-size: 20px;
-        }
-
-        .goods-list h3 {
-            font-size: 24px;
-        }
-
     </style>
 </head>
 <body>
-<header>
-    <button class="cart-button" type="button">Корзина</button>
+<header class="header">
+    <button class="cart-button">Корзина</button>
 </header>
 <main>
     <div class="goods-list"></div>
 </main>
 <script src="index.js"></script>
-<script src="widgets/chat/main.js"></script>
+<script src="../../../Desktop/JS%202/widgets/chat/main.js"></script>
 </body>
 </html>
