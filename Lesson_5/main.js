@@ -5,6 +5,23 @@ const app = new Vue({
         goods: [],
         filteredGoods: [],
         searchLine: '',
+        isVisibleCart: ''
+    },
+    computed: {
+        filterGoods() {
+            let items = this.filteredGoods;
+            let searchLine = this.searchLine;
+            if(!searchLine) {
+                return items;
+            }
+            searchLine = searchLine.trim().toLowerCase();
+            items = items.filter(item => {
+                if(item.product_name.toLowerCase().indexOf(searchLine) !== -1){
+                    return item;
+                }
+            });
+        return items;
+        }},
         methods: {
     makeGETRequest(url, callback) {
         const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
@@ -21,7 +38,7 @@ const app = new Vue({
             if (xhr.readyState === 4) {
                 callback(xhr.responseText);
             }
-        }
+        };
 
         xhr.open('GET', url, true);
         xhr.send();
@@ -31,6 +48,4 @@ const app = new Vue({
                     this.goods = goods;
                     this.filteredGoods = goods;
                 });
-}
-},
-);
+}}});
