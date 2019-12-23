@@ -12,7 +12,7 @@ const str1 = 'Lorem ipsum dolor sit amet, \'consectetur\' adipiscing elit. Nulla
     'rhoncus efficitur risus vitae pulvinar. Maecenas luctus lorem at odio pharetra maximus. Nullam pulvinar' +
     ' urna vitae tempor placerat. Etiam in posuere est, nec sagittis elit. Sed rhoncus velit id congue suscipit. ' +
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu lacinia orci.';
-const regexp3 = /\'(?!int)/gmi;
+const regexp3 = /\'(\B?!\B)/gmi;
 console.log(str1.replace(regexp3, '"'));
 
 // console.log(str1.match(regexp3));
