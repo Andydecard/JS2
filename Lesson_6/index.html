@@ -53,30 +53,21 @@
 </head>
 <body>
 <div id="app">
-    <header>
-        <input type="text" class="goods-search" />
-        <button class="search-button" type="button">Искать</button>
-        <button class="cart-button" type="button">Корзина</button>
-    </header>
-    <main>
-        <template>
-            <div>
-                <div
-                        v-for="item in listItems"
-                        :key="item.id">
-                    {{ item.product_name }}
-                </div>
-            </div>
-        </template>
-        <div class="goods-list">
-            <div class="goods-item" v-for="good in filteredGoods">
-                <h3>{{ good.product_name }}</h3>
-                <p>{{ good.price }}</p>
+    <header class="header">
+        <div class="container">
+            <form class="search-form" @submit.prevent>
+                <input type="text" class="search-input" v-model.trim="searchLine"/>
+            </form>
+            <button class="cart-button" @click="toggleCartVisibility">Корзина</button>
+            <div class="cart-container" v-if="isVisibleCart">
+
             </div>
         </div>
+    </header>
+    <main>
+        <goods-list :goods="filteredGoods"></goods-list>
     </main>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="main.js"></script>
 </body>
