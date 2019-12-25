@@ -79,10 +79,10 @@ const app = new Vue({
                     xhr.send();
                 });
             },
-                toggleCartVisibility() {
-                    this.isVisibleCart = !this.isVisibleCart;
-                },
-            },
+            searchValues(i) {
+                this.searchLine = i;
+            }
+        },
             computed: {
                 filteredGoods() {
                     const searchValue = this.searchLine.replace(/[\*]/gi, '');
